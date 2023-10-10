@@ -21,6 +21,10 @@ class Student:
     def get_grade(self):
         return self._grade
 
+    @property
+    def get_subjects(self):
+        return self._subjects
+
     @get_name.setter
     def set_name(self, name: str):
         if type(name) == str:

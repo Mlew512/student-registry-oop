@@ -44,3 +44,12 @@ def test_invalid_grade_setter(student):
 
 
 # Write tests for Class methods
+def test_study(student):
+    assert student.study("Geometry") == f"{student.get_name} is studying Geometry"
+    assert student.get_subjects == ["Geometry"]
+
+
+def test_advance(student):
+    student.set_grade = "10th"
+    assert student.advance(1) == f"{student.get_name} has advanced to the 11th grade"
+    assert student.get_grade == "11th"
